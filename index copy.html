@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إيفاء | المنصة الوطنية للمخالفات</title>
+    <style>
+        /* إعدادات الخطوط والألوان المقتبسة من هوية إيفاء */
+        @import url('https://googleapis.com');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #f4f7f6;
+        }
+
+        /* 1. رأس الموقع (Header) باللون المطلوب وتتوسطه الصورة */
+        .site-header {
+            background-color: #20c997; /* اللون المطلوب */
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            z-index: 10;
+        }
+
+        /* صورة الشعار في وسط الرأس */
+        .header-logo {
+            height: 50px; /* التحكم في حجم الشعار */
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* 2. جسم الموقع (Body) يحتوي على صورة خلفية ممتدة */
+        .site-body {
+            flex: 1;
+            /* استبدل الرابط أدناه برابط صورة الخلفية الخاصة بك */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url('Back004.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* 3. المربع الشفاف المتمركز في الوسط */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15); /* درجة الشفافية */
+            backdrop-filter: blur(12px); /* تأثير ضبابي زجاجي */
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 16px;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+            color: #ffffff;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        /* النص الأول (العنوان الرئيسي) */
+        .main-title {
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* النص الثاني (الوصف الإضافي) */
+        .sub-text {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.6;
+            margin-bottom: 28px;
+            color: #f0f0f0;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        /* تعديل الزر ليصبح رابطاً ينقلك مباشرة للواتساب */
+        .btn-action {
+            display: block;
+            width: 100%;
+            background-color: #20c997; /* لون متناسق مع الهيدر */
+            color: #ffffff;
+            text-decoration: none; /* إزالة الخط السفلي للروابط */
+            padding: 14px 20px;
+            font-size: 17px;
+            font-weight: 700;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(32, 201, 151, 0.3);
+        }
+
+        /* تأثيرات حركة الزر عند تمرير الفأرة */
+        .btn-action:hover {
+            background-color: #1aa37a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(32, 201, 151, 0.4);
+        }
+
+        .btn-action:active {
+            transform: translateY(0);
+        }
+
+        /* حركة ظهور المربع الشفاف */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- رأس الموقع -->
+    <header class="site-header">
+        <img src="EFAAW.svg" alt="شعار المنصة الوطنية للمخالفات" class="header-logo">
+    </header>
+
+    <!-- بطن (جسم) الموقع -->
+    <main class="site-body">
+        
+        <!-- المربع الشفاف في المنتصف -->
+        <div class="glass-card">
+            <!-- النص الأول (العنوان) -->
+            <h1 class="main-title">المنصة الوطنية للمخالفات (إيفاء)</h1>
+            
+            <!-- النص الثاني (نص إضافي عن التخفيض) -->
+            <p class="sub-text">استعلم الآن وبشكل فوري عن كافة المخالفات المسجلة بحقك، واستفد من قرار تخفيض قيمة المخالفات بنسبة (50%).</p>
+            
+            <!-- زر الانتقال للواتساب (تم إبدال رقم الهاتف والرسالة في الرابط أدناه) -->
+            <a href="https://wa.me/message/EM5T23NP3GAVN1" target="_blank" class="btn-action">
+                استعلام عن المخالفات المشمولة
+            </a>
+        </div>
+
+    </main>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
